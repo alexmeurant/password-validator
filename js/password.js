@@ -25,3 +25,15 @@ function hasNumber(input) {
         return true;
     }
 }
+
+// Checks if password has has a special character:
+function hasSpecialCharacter(input) {
+    const specialCharacters = ['!', '@', '#', '$', '%', '^', '&', '*'];
+    for (let i = 0; i < input.length; i++) {
+        for (let j = 0; j < specialCharacters.length; j++) {
+            if (input[i] === specialCharacters[j]) {
+                return true;
+            }
+        }
+    }
+}
