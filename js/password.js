@@ -1,3 +1,38 @@
+let checkPassword = document.getElementById("button");
+let reportDiv = document.getElementById("report");
+let blockAlertDiv = document.getElementById("blockAlert");
+
+// Reports to the user if its password is complex enough when submission:
+function isPasswordValid(input) {
+    input = document.getElementById("input").value;
+    let report = "";
+    if (hasUppercase(input) && hasLowercase(input) && isLongEnough(input) && hasSpecialCharacter(input) && hasNumber(input) && !hasSpaces(input)) {
+        report = "This password is valid.";
+        // Display alert block with green background color:
+        blockAlertDiv.classList.remove("alert-danger");
+        blockAlertDiv.className += " alert-success d-block";
+    } else {
+        if (!isLongEnough(input)) {
+            report = "Password must be 8-20 characters long.";
+        } else if (!hasUppercase(input)) {
+            report = "Password needs at least one uppercase letter.";
+        } else if (!hasLowercase(input)) {
+            report = "Password needs at least one lowercase letter.";
+        } else if (!hasNumber(input)) {
+            report = "Password needs at least one number.";
+        } else if (!hasSpecialCharacter(input)) {
+            report = "Password needs at least one special character.";
+        } else if (hasSpaces(input)) {
+            report = "Password must not contain spaces.";
+        }
+        // Display alert block with red background color:
+        blockAlertDiv.classList.remove("alert-success");
+        blockAlertDiv.className += " alert-danger d-block";
+    }
+    // Add message in alert block:
+    reportDiv.innerHTML = report;
+}
+
 // Checks if password has 8-20 characters:
 function isLongEnough(input) {
     if (input.length >= 8 && input.length <= 20) {
