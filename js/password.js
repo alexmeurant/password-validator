@@ -11,3 +11,10 @@ function hasUppercase(input) {
         return true;
     }
 }
+
+// Checks if password has a lowercase letter:
+function hasLowercase(input) {
+    if (/[a-z]/.test(input)) {
+        return true;
+    }
+}
