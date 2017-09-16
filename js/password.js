@@ -18,3 +18,10 @@ function hasLowercase(input) {
         return true;
     }
 }
+
+// Checks if password has at least a number:
+function hasNumber(input) {
+    if (/[0-9]/.test(input)) {
+        return true;
+    }
+}
