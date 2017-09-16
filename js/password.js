@@ -4,3 +4,10 @@ function isLongEnough(input) {
         return true;
     }
 }
+
+// Checks if password has an uppercase letter:
+function hasUppercase(input) {
+    if (/[A-Z]/.test(input)) {
+        return true;
+    }
+}
