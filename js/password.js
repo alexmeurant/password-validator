@@ -1,6 +1,6 @@
-let checkPassword = document.getElementById("button");
-let reportDiv = document.getElementById("report");
-let blockAlertDiv = document.getElementById("blockAlert");
+const checkPassword = document.getElementById("button");
+const reportDiv = document.getElementById("report");
+const blockAlertDiv = document.getElementById("blockAlert");
 
 // Reports to the user if its password is complex enough when submission:
 function isPasswordValid(input) {
