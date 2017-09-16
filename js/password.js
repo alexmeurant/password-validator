@@ -37,3 +37,10 @@ function hasSpecialCharacter(input) {
         }
     }
 }
+
+// Checks if password contains spaces:
+function hasSpaces(input) {
+    if (/\s/.test(input)) {
+        return true;
+    }
+}
