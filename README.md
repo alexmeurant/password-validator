@@ -7,5 +7,6 @@ The **rules** for our password validator are:
 
 - Has at least **one uppercase** letter
 - Has at least **one lowercase** letter
+- Has at least **one number**
 - Must be **8-20 characters long**
 - Has at least **one special character**
